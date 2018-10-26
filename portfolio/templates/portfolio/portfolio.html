@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portafo.jpg' %}{% endblock %}
+
+
+{% block headers %}
+<h1>Portafolio</h1>
+<span class="subheading">Currículo</span>
+{% endblock %}
+
+
+
+{% block content %}
+ <h1 class="text-center" class="display-3">Proyectos</h1>  
+  {% for project in projects %}
+    <div class="container">
+    
+    <!-- Proyecto -->
+      <div class="row project justify-content-around">
+      {% for items in project %}  
+        <div class="card text-center" style="width: 18rem;">
+          <img class="card-img-top" src="{{items.image.url}}" style="width:100%; height:40%" alt="Card image cap">
+          <div class="card-body">
+            <h3><strong class="card-title">{{items.title}}</strong></h3>
+            <blockquote class="card-text">{{items.description}}</blockquote>
+            {% if items.link %}
+            <a target="__blank_" href="{{items.link}}" class="btn btn-primary">Más información</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+          
+  {% endfor %}
+
+{% endblock %}
+

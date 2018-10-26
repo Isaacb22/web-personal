@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Acerca de{% endblock %}
+
+
+{% block background %}{% load static %}{% static 'core/img/estudio.jpg' %}{% endblock %}
+
+
+{% block headers %}
+<h1>Acerca de</h1>
+<span class="subheading">Biografía</span>
+{% endblock %}
+
+{% block content %}
+<div class="row"> 
+	<div class="col-lg-3 col-md-4 offset-lg-1">
+	    <img class="img-fluid avatar" src="{% static 'core/img/isaac.jpg' %}" alt="">
+	</div>
+	<div class="col-lg-7 col-md-8">
+	    <h2 class="section-heading">Isaac Bonalde</h2>   
+	    <p>Nacido en Coro-Falcon-Venezuela, musico y estudiante de programacion. Me encanta la musica y mas tocar el piano, me la paso en la oficina con los compas que me estan ense;ando a programar y en la noche me la paso practicando piano, mi sue;o es ser un gran programador y musico productor.</p>
+	    <p>Dios, Familia, Música, Programacion, VENEZUELA</p>
+	</div>
+</div>
+{% endblock %}
+
